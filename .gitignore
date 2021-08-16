@@ -46,6 +46,7 @@ ava_activespeaker_test_v1.0/
 weights/
 results/
 final/
+.../
 
 # Installer logs
 pip-log.txt
