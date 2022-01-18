@@ -8,6 +8,7 @@ sampling_rate = 16000
 
 
 def generate_audio_meta_data(full_df, balanced=True, random_seed=42):
+    full_df['label_id'] = full_df['label_id'].apply(lambda x:x if x in [0,1] else 0)
     # Assumes there is always more negatives than positives.
     df_neg = full_df[full_df['label_id'] == 0]
     df_pos = full_df[full_df['label_id'] == 1]
